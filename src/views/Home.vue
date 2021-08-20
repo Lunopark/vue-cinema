@@ -1,37 +1,33 @@
 <template>
   <div class="home">
+    <Header />
     <Slider :popular="popular" />
+    <Top />
   </div>
 </template>
 
 <script>
-import server from '@/assets/libs/server';
-import Slider from '@/components/Slider.vue'
+import server from "@/assets/libs/server";
+import Header from "@/components/Header"
+import Slider from "@/components/Slider";
+import Top from "@/components/Top"
 
 export default {
   name: 'Home',
   data(){
-    return{
-      hello: 'Hello page',
+    return {
       popular: []
     }
   },
   created() {
-      server('popular').then(data => {
-      this.popular = data.results.slice(0, 5)
+    server('popular').then(data => {
+      this.popular = data.results.slice(0, 5);
     })
   },
-  mounted() {
-    console.log(1);
-  },
-  beforeUpdate() {
-    console.log(2);
-  },
-  updated() {
-    console.log(3);
-  },
-  components: {
-    Slider
+  components: { 
+    Slider,
+    Top,
+    Header
   }
 }
 </script>
