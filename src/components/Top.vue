@@ -20,7 +20,7 @@ export default {
   },
   created() {
     server('popular').then(data => {
-      this.popular = data.results.slice(5, 10);
+      this.popular = data.results.slice(6, 11);
     })
   },
     components: {
