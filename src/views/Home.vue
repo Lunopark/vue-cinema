@@ -3,6 +3,7 @@
     <Header />
     <Slider :popular="popular" />
     <Top />
+    <Footer />
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import server from "@/assets/libs/server";
 import Header from "@/components/Header"
 import Slider from "@/components/Slider";
 import Top from "@/components/Top";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'Home',
@@ -27,7 +29,8 @@ export default {
   components: { 
     Slider,
     Top,
-    Header
+    Header,
+    Footer
   }
 }
 </script>

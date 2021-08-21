@@ -30,6 +30,7 @@ export default {
 <style lang="scss" scoped>
 .list-title{
     background: #fff;
+    color: #000;
     text-align: center;
 }
 .about-desc{

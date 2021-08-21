@@ -36,7 +36,6 @@ export default {
     }
 .top{
     align-items: center;
-    display: inline-block;
     justify-content: space-between;
     text-align: center;
     padding: 25px 0 25px 0;

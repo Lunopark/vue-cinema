@@ -2,6 +2,7 @@
   <div class="about">
     <Header />
     <List :popular="popular" />
+    <Footer />
   </div>
 </template>
 
@@ -9,6 +10,7 @@
 import Header from "@/components/Header";
 import server from "@/assets/libs/server";
 import List from "@/components/List";
+import Footer from "@/components/Footer";
 
 export default {
   name: "About",
@@ -24,16 +26,12 @@ export default {
   },
   components: {
     List,
-    Header
+    Header,
+    Footer
   },
 };
 </script>
 
 <style scoped>
-.about h1{
-  text-align: center;
-}
-.about span{
-  float: left;
-}
+
 </style>

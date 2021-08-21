@@ -38,4 +38,14 @@ export default {
         color: #fff;
         margin-bottom: 35px;
     }
+    .btn{
+        background: #0d253f;
+        border: 1px solid #01b4e4;
+        border-radius: 25px;
+        padding: 5px 25px;
+        color: #01b4e4;
+    }
+    .btn:active, .btn:focus, .btn:hover {
+        background: #fff;
+    }
 </style>
