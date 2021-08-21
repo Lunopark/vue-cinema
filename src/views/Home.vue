@@ -10,7 +10,7 @@
 import server from "@/assets/libs/server";
 import Header from "@/components/Header"
 import Slider from "@/components/Slider";
-import Top from "@/components/Top"
+import Top from "@/components/Top";
 
 export default {
   name: 'Home',
