@@ -1,19 +1,38 @@
 <template>
     <div>
-        
+        <Popup v-if="isInfoPopupVisible" @closePopup="closeInfoPopup" />
+
         <div class="top-item" v-for="(movie, index) in popular" :key="index">
-        <img :src="'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path" class="top-item_image" alt="">
-        <h4 class="top-item_title">{{movie.title}}</h4>
-        <p class="vote">рейтинг: {{movie.vote_count}}</p>
-        <button class="btn">Preview</button>
+            <img :src="'https://image.tmdb.org/t/p/w500/' + movie.backdrop_path" class="top-item_image" alt="">
+            <h4 class="top-item_title">{{movie.title}}</h4>
+            <p class="vote">рейтинг: {{movie.vote_count}}</p>
+            <button class="btn" @click="showPopupInfo">Preview</button>
         </div>
     </div>
 </template>
 
 <script>
+import Popup from "@/components/popup/Popup"
+
 export default {
     name: 'TopItem',
-    props: ['popular']
+    props: ['popular'],
+    components: {
+        Popup
+    },
+    data() {
+        return {
+            isInfoPopupVisible: false
+        }
+    },
+    methods: {
+        showPopupInfo() {
+            this.isInfoPopupVisible = true
+        },
+        closeInfoPopup() {
+            this.isInfoPopupVisible = false
+        }
+    }
 }
 </script>
 

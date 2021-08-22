@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <Popup v-if="PopupVisible" @closeWarning="closePopupWindow" />
     <Header />
     <Slider :popular="popular" />
     <Top />
@@ -9,7 +8,6 @@
 </template>
 
 <script>
-import Popup from "@/components/Popup"
 import server from "@/assets/libs/server";
 import Header from "@/components/Header"
 import Slider from "@/components/Slider";
@@ -28,20 +26,11 @@ export default {
       this.popular = data.results.slice(0, 5);
     })
   },
-  methods: {
-    ShowPopup() { 
-      this.PopupVisible = true
-    },
-    closeWarningWindow(){
-      this.PopupVisible = false
-  }
-},
   components: { 
     Slider,
     Top,
     Header,
     Footer,
-    Popup
   }
 }
 </script>

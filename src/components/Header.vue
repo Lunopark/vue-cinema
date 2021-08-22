@@ -4,7 +4,6 @@
     <nav>
     <ul class="menu">
         <li class="menu_item"><a href="/">General</a></li>
-        <li class="menu_item"><a href="#">Popular</a></li>
         <li class="menu_item"><a href="#/about">About</a></li>
         <li class="menu_item">
              <input type="text" class="search" v-model="search" placeholder="Write for search" />
@@ -24,9 +23,10 @@ export default {
         }
     },
     computed: {
-        searchHandler() {
-            
-        }
+        filterPopular(){
+            return this.popular.filter(movie => movie.title.includes(this.search))
+        }            
+        
     }
 }
 </script>
@@ -60,7 +60,7 @@ export default {
     background: #fff;
 }
 .headerlogo{
-    margin-top: 15px;
+    margin-top: 10px;
     width: 50px;
     float: left;
 }
